@@ -5,6 +5,7 @@ class Modal {
         this.closeIcon = document.querySelector(".modal__close")
         this.openModalButtons = document.querySelectorAll(".open-modal")
         this.events()
+        
     }
 
 
@@ -16,15 +17,21 @@ class Modal {
       this.closeIcon.addEventListener("click", () => this.closeTheModal())
       //pushes any key
       document.addEventListener("keyup", e => this.keyPressHandler(e))
+      
     }
 
     openTheModal(e) {
       e.preventDefault()
       this.modal.classList.add("modal--is-visible")
+      document.documentElement.style.overflow = 'hidden'
+      document.body.scroll = "no"
+      
     }
 
     closeTheModal() {
       this.modal.classList.remove("modal--is-visible")
+      document.documentElement.style.overflow = 'scroll'
+      document.body.scroll = "yes"
     }
 
     keyPressHandler(e) {
@@ -54,5 +61,6 @@ class Modal {
         `)
     }
 }
+
 
 export default Modal
