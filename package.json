@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/aebyss/travel-site#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "lazysizes": "^5.1.2",
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1"
