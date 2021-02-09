@@ -5,6 +5,18 @@ import StickyHeader from "./modules/StickyHeader"
 import Modal from "./modules/Modal"
 import ClientArea from "./modules/ClientArea"
 
+// React Related Code goes Here
+
+import React from "react"
+import ReactDOM from "react-dom"
+
+// import react component that we created
+
+import MyComponent from "./modules/MyComponent"
+
+
+ReactDOM.render(<MyComponent />, document.querySelector("#my-react-example"))
+
 new ClientArea()
 new Modal()
 let stickyHeader = new StickyHeader()
